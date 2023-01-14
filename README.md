@@ -13,7 +13,7 @@ https://github.com/blakerichardburns/social-network-api
   * [Installation Instructions](#installation-instructions)
   * [Questions](#questions)
   ## Installation Instructions
-  
+  Express.js, Mongoose
   
   ## Questions
   For any inquiries, spam by inbox here: blakerichardburns@gmail.com
