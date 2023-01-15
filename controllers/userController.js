@@ -47,10 +47,38 @@ module.exports = {
                 : User.deleteMany({ _id: { $in: user.thoughts } })
             )
             .then(() => response.json({ message: 'User and Thoughts have been deleted.' }))
+            .catch((error) => response.status(500).json(error))
+    },
+    
+    postFriend(request, response) {
+        User.findOneAndUpdate(
+            { _id: request.params.userId },
+            { $addToSet: { friends: request.body } },
+            { runValidators: true, new: true }
+        )
+            .then((user) =>
+                !user
+                    ? response
+                        .status(404)
+                        .json({ message: 'There are no users with that ID...' })
+                    : response.json(user)
+            )
             .catch((error) => response.status(500).json(error));
     },
     
-    // postFriend
-    
-    // deleteFriend
+    deleteFriend(request, response) {
+        User.findOneAndUpdate(
+            { _id: request.params.userId },
+            { $pull: { friend: { friendId: request.params.friendId } } },
+            { runValidators: true, new: true }
+        )
+            .then((user) =>
+            !user
+                ? response
+                    .status(404)
+                    .json({ message: 'There are no users with that ID...' })
+                : response.json(user)
+            )
+            .catch((error) => response.status(500).json(error));
+    },
 };
