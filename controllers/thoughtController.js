@@ -6,7 +6,7 @@ module.exports = {
       .then((thought) => {
         return User.findOneAndUpdate(
           { _id: request.body.userId },
-          { $addToSet: { thoughts: thought_id } },
+          { $addToSet: { thoughts: thought._id } },
           { new: true }
         );
       })
@@ -18,13 +18,13 @@ module.exports = {
             })
           : response.json('Thought created.')
       )
-      .catch((error) => response.json(500).json(error));
+      .catch((error) => response.status(500).json(error));
   },
 
   getAllThoughts(request, response) {
     Thought.find()
       .then((thoughts) => response.json(thoughts))
-      .catch((error) => response.status(500).json(error));
+      .catch((error) => response.status(500).json(error.message));
   },
 
   getOneThought(request, response) {

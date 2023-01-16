@@ -16,6 +16,8 @@ module.exports = {
   getOneUser(request, response) {
     User.findOne({ _id: request.params.userId })
       .select('-__v')
+      .populate('thoughts')
+      .populate('friends')
       .lean()
       .then((user) =>
         !user
@@ -77,7 +79,7 @@ module.exports = {
   deleteFriend(request, response) {
     User.findOneAndUpdate(
       { _id: request.params.userId },
-      { $pull: { friends: { friendId: request.params.friendId } } },
+      { $pull: { friends: request.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((user) =>
