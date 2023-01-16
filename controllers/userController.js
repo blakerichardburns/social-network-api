@@ -52,7 +52,7 @@ module.exports = {
           ? response
               .status(404)
               .json({ message: 'There are no users with that ID...' })
-          : User.deleteMany({ _id: { $in: user.thoughts } })
+          : Thought.deleteMany({ username: user.username })
       )
       .then(() =>
         response.json({ message: 'User and Thoughts have been deleted.' })
