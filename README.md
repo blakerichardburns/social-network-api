@@ -7,11 +7,12 @@ Module 18 Challenge: NoSQL
 https://github.com/blakerichardburns/social-network-api
 
 ## Description
-
+Back end for a Social Network API, created for the purpose of testing the web developer's ability to build and seed a Mongo database with Mongoose Object Data Modeling.
 
  ## Table of Contents
   * [Installation Instructions](#installation-instructions)
   * [Questions](#questions)
+  
   ## Installation Instructions
   Express.js, Mongoose
   
