@@ -29,7 +29,8 @@ module.exports = {
 
   putUser(request, response) {
     User.findOneAndUpdate(
-      { _id: request.body.userId },
+      { _id: request.params.userId },
+      { $set: request.body },
       { runValidators: true, new: true }
     )
       .then((user) =>
