@@ -1,7 +1,7 @@
 # social-network-api
 Module 18 Challenge: NoSQL
 
-[![Demonstration Video](https://img.youtube.com/vi/RmH8fCtmXp4/maxresdefault.jpg)](https:/RmH8fCtmXp4/youtu.be/ )
+[![Demonstration Video](https://img.youtube.com/vi/RmH8fCtmXp4/maxresdefault.jpg)](https://youtu.be/RmH8fCtmXp4 )
 
 ## Repository Link
 https://github.com/blakerichardburns/social-network-api
