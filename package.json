@@ -1,7 +1,7 @@
 {
   "name": "social-network-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for a Social Network API, created for the purpose of testing the web developer's ability to build and seed a Mongo database with Mongoose Object Data Modeling.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
