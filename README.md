@@ -21,5 +21,5 @@ Backend for a Social Network API, created for the purpose of testing the web dev
   N/A
 
   ## Questions
-  For any inquiries, spam by inbox here: blakerichardburns@gmail.com
+  For any inquiries, spam my inbox here: blakerichardburns@gmail.com <br>
   To peruse more of my portfolio, check this out: [blakerichardburns](https://github.com/blakerichardburns)
